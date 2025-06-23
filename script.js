@@ -18,3 +18,32 @@
     }, 5000);
   });
 
+  
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const targetSection = document.getElementById(link.getAttribute('data-section'));
+      
+      // If the section is currently visible, hide it
+      if (targetSection.style.display === 'block') {
+        targetSection.style.display = 'none';
+        link.classList.remove('active');
+      } else {
+        // Hide all sections
+        document.querySelectorAll('.page-section').forEach(section => {
+          section.style.display = 'none';
+        });
+
+        // Remove active from all links
+        navLinks.forEach(lnk => lnk.classList.remove('active'));
+
+        // Show the clicked section and mark link active
+        targetSection.style.display = 'block';
+        link.classList.add('active');
+      }
+    });
+  });
+

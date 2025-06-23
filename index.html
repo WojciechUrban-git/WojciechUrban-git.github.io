@@ -3,30 +3,82 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wojciech Urban</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 </head>
 
-
 <body>
-    <header class = "holo-header">
-       <img src="images/Photo_WU.png" alt="Wojciech Urban" class = "circle-photo" />
+    <header class="holo-header">
+        <img src="images/Photo_WU.png" alt="Wojciech Urban" class="circle-photo" />
         <h1>Wojciech Urban</h1>
-        <p>Computer Science Student | Game Developer | Programmer</p>
+        <div class="social-icons">
+            <a href="mailto:wojciecj.j.urban@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/WojciechUrban-git" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/wojciechurban/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/wojtek_urban_/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </header>
 
     <nav>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-        <a href="about.html">About Me</a>
+        <a href="#" data-section="projects" class="nav-link">Projects</a>
+        <a href="#" data-section="career" class="nav-link">Career</a>
+        <a href="#" data-section="about" class="nav-link">About Me</a>
     </nav>
 
+    <main>
+        <section id="projects" class="page-section" style="display:none;">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project One</h3>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>Lorem Ipsum</p>
+            </div>
+        </section>
+
+        <section id="career" class="page-section" style="display:none;">
+            <h2>Career</h2>
+            <div class="career-buttons">
+                <button class="career-btn" data-subsection="work">Work</button>
+                <button class="career-btn" data-subsection="education">Education</button>
+            </div>
+
+            <div id="work" class="career-subsection" style="display:none;">
+                <h3>Work Experience</h3>
+                <p>Details about your work experience...</p>
+            </div>
+
+            <div id="education" class="career-subsection" style="display:none;">
+                <h3>Education</h3>
+                <p>Details about your education...</p>
+            </div>
+        </section>
+
+
+        <section id="about" class="page-section" style="display:none;">
+            <h2>About Me</h2>
+            <p>Lorem Ipsum</p>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Wojciech Urban</p>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
