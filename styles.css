@@ -2,31 +2,38 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  background: #0a0f2c; 
+  color: #e4efff; 
 }
 
 header {
-  background: #007acc;
-  color: white;
+  background: #003566;
+  color: #e4efff;
   padding: 2rem;
   text-align: center;
 }
 
 nav {
-  background: #333;
-  padding: 0.5rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #001a33; 
 }
 
 nav a {
-  color: white;
-  margin: 0 1rem;
+  display: inline-block;
+  background-color: #002244;
+  color: #e4efff;
+  padding: 1rem 2rem;
+  margin: 0;
+  border: none;
+  border-radius: 0;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #0077cc;
 }
 
 main {
@@ -38,24 +45,84 @@ section {
 }
 
 .project {
-  background: white;
+  background: #132047;
   padding: 1rem;
   margin: 1rem 0;
-  border-left: 4px solid #007acc;
+  border-left: 4px solid #00509e;
+  color: #e4efff;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #00162e;
+  color: #e4efff;
   text-align: center;
-  background: #333;
-  color: white;
   padding: 1rem;
 }
 
 .circle-photo {
-  width: 150px;          
-  height: 150px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #007acc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 3px solid #00509e;
+  box-shadow: 0 0 10px rgba(81, 114, 180, 0.7); 
+  object-position: 0% -1%;
+}
+
+.holo-header {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  padding: 3rem 2rem;
+  color: #e4efff;
+  text-align: center;
+  background: linear-gradient(135deg, #162447, #1f4068);
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(81, 114, 180, 0.2);
+  box-sizing: border-box; 
+}
+
+
+.holo-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.holo-header.shine::before {
+  animation: shine 1s forwards;
+  opacity: 1;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .holo-header {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
 }
