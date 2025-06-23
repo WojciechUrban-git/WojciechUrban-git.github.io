@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -24,9 +25,13 @@
             <a href="https://www.linkedin.com/in/wojciechurban/" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://www.instagram.com/wojtek_urban_/" target="_blank" aria-label="Instagram">
+            <a href="https://www.instagram.com/wojtek_urban_/#" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
+            <hr>
+            <p class="into-text">Hello there! My name is Wojciech, i'm a passionate programmer who feels enjoyment and
+                fulfillment <br>from the journey of creating experiences.</p>
+            <hr>
         </div>
     </header>
 
@@ -38,45 +43,63 @@
 
     <main>
         <section id="projects" class="page-section" style="display:none;">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project One</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div class="project">
-                <h3>Project Two</h3>
-                <p>Lorem Ipsum</p>
-            </div>
+            <a href="https://ojciecdyktator.itch.io/pipeline-panic" class="project-link" target="_blank">
+                <div class="project">
+                    <img src="images/pipelinePanic.png" alt="Pipeline-Panic" class="project-image">
+                    <h3>Pipeline Panic</h3>
+                    <p>Puzzle game created for Speed Jam. <br>It scored 6th out of 125 other entries</p>
+                </div>
+            </a>
+
         </section>
 
+
+
         <section id="career" class="page-section" style="display:none;">
-            <h2>Career</h2>
             <div class="career-buttons">
                 <button class="career-btn" data-subsection="work">Work</button>
                 <button class="career-btn" data-subsection="education">Education</button>
             </div>
 
             <div id="work" class="career-subsection" style="display:none;">
-                <h3>Work Experience</h3>
-                <p>Details about your work experience...</p>
+                <hr class="career-line">
+                <h2>Esport Area Rzeszów <br> 2022-2023</h2>
+                <p>
+                    I worked as a <b>Sim-Racing personal trainer</b>, leading individual 60-minute sessions focused on
+                    driving technique,<br> race strategy, and sim rig setup. I also conducted group sessions for up to
+                    10 participants, <br>explaining racing rules and track etiquette for competitive virtual racing.
+                </p>
+                <hr class="career-line">
             </div>
 
             <div id="education" class="career-subsection" style="display:none;">
-                <h3>Education</h3>
-                <p>Details about your education...</p>
+                <hr class="career-line">
+                <h2>Vrije Universiteit Amsterdam <br> 2023-2026</h2>
+                <p>
+                    I'm currentrly pursuing Computer Science Bachelor Degree at Vrije Universiteit. <br>I am on
+                    trajectory to recive my degree after third year of my studies
+                </p>
+                <hr class="career-line">
+                <h2>John Paul II Secondary School Of The Sisters Of The Presentation In Rzeszów <br> 2019-2023</h2>
+                <p>
+                    Graduated with exeptional result, wrote Polish Maturity exams from: <br>
+                    Mathematics, Geography and English
+                </p>
             </div>
         </section>
 
 
         <section id="about" class="page-section" style="display:none;">
-            <h2>About Me</h2>
-            <p>Lorem Ipsum</p>
+            <hr>
+            <p class="about-me">I am a <b>third year Computer Science student</b> at
+                Vrije Universiteit Amsterdam with interest in game development and graphics
+                programming. <b>I enjoy working in teams and always take
+                responsibility</b> for my part of the work. Besides that I love sports
+            mainly football, skiing, motorsports and sailing. I am also interested in financial markets as well as psyhology</p>
+            <hr>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Wojciech Urban</p>
-    </footer>
     <script src="script.js"></script>
 
 </body>

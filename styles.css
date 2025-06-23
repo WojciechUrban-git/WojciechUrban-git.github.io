@@ -19,6 +19,10 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
 .social-icons {
   margin-top: 1rem;
 }
@@ -35,6 +39,23 @@ header {
   color: #0077cc;
 }
 
+h2 {
+  text-align: center;
+}
+
+.career-btn.active {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #e4efff;
+  box-shadow: 0 0 10px rgba(81, 114, 180, 0.5);
+  transition: background 0.3s ease;
+}
+
+.about-me {
+  line-height: 1.8;
+}
 
 nav {
   display: flex;
@@ -59,6 +80,15 @@ nav a:hover {
   background-color: #0077cc;
 }
 
+nav a.active {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(81, 114, 180, 0.5);
+  color: #e4efff;
+}
+
 main {
   padding: 2rem;
 }
@@ -68,11 +98,43 @@ section {
 }
 
 .project {
-  background: #132047;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 4px solid #00509e;
+  background-color: #002244;
   color: #e4efff;
+  padding: 1rem 2rem;
+  border-left: 4px solid #00509e;
+  font-weight: bold;
+  transition: background-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.project:hover {
+  background-color: #0077cc;
+}
+
+.project:active {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(81, 114, 180, 0.5);
+  color: #e4efff;
+}
+
+.project-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #00509e;
+}
+
+.project-link{
+  text-decoration: none;
 }
 
 footer {
@@ -84,10 +146,31 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+p {
+  text-align: center;
+}
+
+hr {
+  margin-top: 1rem;
+  border: none;
+  border-top: 1.8px solid #e4efff;
+  margin: 40px center;
+  width: 55%;
+  box-shadow:
+    0 0 5px rgba(81, 114, 180, 0.8),
+    0 0 10px rgba(81, 114, 180, 0.6),
+    0 0 15px rgba(81, 114, 180, 0.4);
+}
+
+.into-text {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: bold;
+}
 
 .circle-photo {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #00509e;
@@ -106,6 +189,41 @@ footer {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(81, 114, 180, 0.2);
   box-sizing: border-box;
+}
+
+.career-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.career-btn {
+  background-color: #002244;
+  color: #e4efff;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+  height: auto;
+  width: 150px;
+}
+
+.career-subsection {
+  line-height: 1.7;
+  text-align: center;
+}
+
+.career-btn:hover {
+  background-color: #0077cc;
 }
 
 
@@ -140,6 +258,14 @@ footer {
     left: 100%;
     opacity: 0;
   }
+}
+
+@media (max-width: 1200px) {
+  .holo-header {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+
 }
 
 @media (max-width: 600px) {
