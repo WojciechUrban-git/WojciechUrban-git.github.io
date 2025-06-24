@@ -9,6 +9,10 @@ body {
     0 0 5px rgba(81, 114, 180, 0.8),
     0 0 10px rgba(81, 114, 180, 0.6),
     0 0 15px rgba(81, 114, 180, 0.4);
+
+}
+body, html {
+  overflow-x: hidden;
 }
 
 
