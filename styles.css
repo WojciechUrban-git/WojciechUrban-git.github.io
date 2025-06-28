@@ -340,4 +340,17 @@ hr {
   .skill-bar{
     width: 90%;
   }
+
+  .circle-photo {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .into-text{
+    font-size: 0.95rem;
+  }
+
+  .career-btn{
+    width: 100px;
+  }
 }
