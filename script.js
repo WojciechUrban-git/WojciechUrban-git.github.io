@@ -75,3 +75,11 @@ careerButtons.forEach(button => {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) {
+        const targetId = activeLink.getAttribute('data-section');
+        document.getElementById(targetId).style.display = 'block';
+    }
+});
